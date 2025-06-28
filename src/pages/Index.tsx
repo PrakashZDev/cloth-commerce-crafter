@@ -1,9 +1,12 @@
-
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductGrid from "@/components/ProductGrid";
 import Cart from "@/components/Cart";
+import FeaturedCategories from "@/components/FeaturedCategories";
+import Newsletter from "@/components/Newsletter";
+import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
 import { CartItem, Product } from "@/types";
 
 const Index = () => {
@@ -49,7 +52,11 @@ const Index = () => {
         onCartClick={() => setIsCartOpen(true)}
       />
       <Hero />
+      <FeaturedCategories />
       <ProductGrid onAddToCart={addToCart} />
+      <Testimonials />
+      <Newsletter />
+      <Footer />
       <Cart
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}
